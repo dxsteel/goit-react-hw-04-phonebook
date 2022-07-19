@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 import styles from './ContactList.module.css';
 
@@ -8,11 +7,10 @@ const ContactList = ({ filterContacts, deleteContact }) => {
       {filterContacts.map(({ id, number, name }) => {
         return (
           <li key={id}>
-              {name}: {number}
+            {name}: {number}
             <button className={styles.button} onClick={() => deleteContact(id)}>
               Delete
-              </button>
-            
+            </button>
           </li>
         );
       })}
